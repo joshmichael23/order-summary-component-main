@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root{
+    --paleblue: hsl(225, 100%, 94%);
+    --brightblue: hsl(245, 75%, 52%);
+    --verypaleblue: hsl(225, 100%, 98%);
+    --desaturatedblue: hsl(224, 23%, 55%);
+    --darkblue: hsl(223, 47%, 23%);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+
+
+    
+    font-family: "Red Hat Display";
+    margin:0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.container{
+    border-radius: 1em;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 1em;
+    
+    box-shadow: 1px 15px 25px 25px hsl(245, 75%, 52% ,.1);
+}
+
+.hero{
+    content: url(images/illustration-hero.svg);
+    height: auto;
+    max-width: 100%;
+    
+    width: auto;
+    object-fit:contain;
+    
+}
+
+.summary{
+    display:flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+.summary > h1{
+    color: var(--darkblue);
+    font-size: 23px;
+    font-weight: 900;
+    line-height: 1;
+    display: inline-block;
+    height: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.summary > p{
+    color: var(--desaturatedblue);
+    text-align: center;
+    
+}
+
+.payment{
+    margin-left: 22px;
+    margin-right: 22px;
+    border-radius: 10px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--verypaleblue);
+    padding: 1em;
+    justify-content: space-between;
+}
+
+.payment > #btnChange{
+    color: rebeccapurple;
+    font-weight: 900;
+    text-decoration: underline;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment > .logo{
+    content: url('images/icon-music.svg');
+}
+
+.payment > .price{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: start;
+    margin-right: 2em;
+}
+
+.payment > .price > strong{
+    color: var(--darkblue);
+    font-weight:900;
+    font-size: 15px;
+}
+.payment > .price > small{
+    color: var(--desaturatedblue);
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-items: center;
+    gap: 1.2em;
+    margin-bottom: 2em;
+}
+
+#btnProceed{
+    margin: 0px 22px;
+    border-radius: 1em;
+    border:none;
+    color:white;
+    font-size: 1em;
+    font-weight: 700;
+    box-shadow: 2px 1em 1em 1px hsl(245, 75%, 52%, .2);
+    font-family: inherit;
+    padding: 1em;
+    background-color: var(--brightblue);
+}
+
+#btnCancel{
+    display: flex;
+    justify-content: center;
+    margin-left:auto;
+    margin-right: auto;
+    width: fit-content;
+    font-weight: 700;
+    font-size: 15px;
+    color:var(--desaturatedblue);
+    text-decoration: none;
+}
+
+
+@media screen and (min-width: 300px){
+
+    body{
+        background: url(images/pattern-background-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: 100vh;
+    }
+    .container{
+        background-color: white;
+        display: flex;
+        justify-self:center;
+        align-self: center;
+        height: auto;
+        width: 85vw;
+    }    
+
+    .summary{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .summary > p{
+        gap: 1em;
+        margin: 0px 25px 25px;
+        
+    }
+}
+
+@media screen and (min-width: 800px){
+
+    body{
+        background: url(images/pattern-background-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+
+    }
+    .container{
+        background-color: white;
+        display: flex;
+        justify-self:center;
+        align-self: center;
+        height: auto;
+        width: 20vw;
+    }
+
+    
+    .summary{
+       
+        margin: 0px 25px;
+    }
+
+    #btnProceed{
+        padding: 1em;
+        margin: 0px 3em;
+    }
+
+    .summary > p{
+        margin: 0px 25px;
+        
+    }
+}
